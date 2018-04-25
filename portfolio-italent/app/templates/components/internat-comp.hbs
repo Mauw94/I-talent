@@ -1,0 +1,19 @@
+<article class="listing">
+    <a {{action 'toggleImageSize'}} class="image {{if isWide " wide "}}">
+        <img src="{{inter.image}}" alt="">
+        <small>View image</small>
+    </a>
+    <h3>{{rental.name}}</h3>
+    <div class="detail owner">
+        <span>Date:</span> {{inter.date}}
+    </div>
+    <div class="detail location">
+        <span>Location:</span> {{inter.location}}
+    </div>
+    <div class="detail type">
+        <span>Description:</span> {{inter.description}}
+    </div>
+    <div class="detail bedrooms">
+        <span>Verslag:</span> {{inter.verslag}}
+    </div>
+</article>

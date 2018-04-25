@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="menu">
+        {{#link-to "index"}}
+        <h1>
+            <em>Home</em>
+        </h1>
+        {{/link-to}}
+        <div class="links">
+            {{#link-to "overview" class="menu-about"}}
+                   Overview
+            {{/link-to}}
+            {{#link-to "selection" class="menu-contact"}}
+                   My selection
+            {{/link-to}}
+            {{#link-to "reflection" class="menu-reflection"}}
+                   Reflection
+            {{/link-to}}
+        </div>
+    </div>
+    <div class="body">
+        {{outlet}}
+    </div>
+</div>
