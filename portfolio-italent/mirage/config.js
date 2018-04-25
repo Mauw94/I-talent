@@ -12,7 +12,7 @@ export default function () {
           location: 'Zuid-Afrika, Pretoria',
           description: 'Internationale week - project themasadsadsadsadadadasdsad',
           verslag: 'leeg voor nu',
-          image: '../assets/images/DSC_0142.jpg'
+          image: '../assets/images/DSC_0141.jpg'
         }
       }, {
         type: 'internationalisering',

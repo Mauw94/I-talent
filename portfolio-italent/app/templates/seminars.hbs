@@ -1,8 +1,13 @@
+<div class="jumbo">
+    <h2>Overzicht activiteiten: seminaries</h2>
+    <hr>
+    <br>
+</div>
 {{#each model as |seminar|}}
     {{seminar-comp seminar=seminar}}
 {{/each}}
 <div class="jumbo">
-    {{#link-to "overview" class="button"}}
+    {{#link-to "overview" class="btn"}}
         Back 
     {{/link-to}}
 </div>

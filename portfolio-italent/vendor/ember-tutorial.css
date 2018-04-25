@@ -325,6 +325,29 @@ p {
     position: relative;
 }
 
+#seminars {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#seminars td, #seminars th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#seminars tr:nth-child(even){background-color: #f2f2f2;}
+
+#seminars tr:hover {background-color: #ddd;}
+
+#seminars th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(9, 86, 145);
+    color: white;
+}
+
 .about {
     background: url(../assets/images/about.png);
     background-size: contain;
