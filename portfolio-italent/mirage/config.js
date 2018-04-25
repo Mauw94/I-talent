@@ -10,7 +10,7 @@ export default function () {
           date: '26/03/2017 - 02/04/2017',
           name: 'Internationale BusIT week',
           location: 'Zuid-Afrika, Pretoria',
-          description: 'Internationale week - project themasadsadsadsadadadasdsad',
+          description: 'Internationale BusIt week waar wij een project hebben gedaan aan de Belgium Campus universiteit.',
           verslag: 'leeg voor nu',
           image: '../assets/images/DSC_0141.jpg'
         }
@@ -21,9 +21,24 @@ export default function () {
           date: '24/02/2018 - 01/06/2018',
           name: 'Buitenlandse stage',
           location: 'Finland (Lapland), Rovaniemi',
-          description: 'Stage at the Lapland University of Applied Sciences (Lapin AMK)',
+          description: 'Stage: Lapland University of Applied Sciences (Lapin AMK). Hier deed ik stage in pLAB, het software engineering laboratorium van de universiteit.',
           verslag: 'leeg voor nu',
           image: '../assets/images/pNSUkir.jpg'
+        }
+      }]
+    };
+  });
+
+  this.get('/wedstrijds', function() {
+    return {
+      data: [{
+        type: 'wedstrijd',
+        id: '1',
+        attributes: {
+          date: '20/40/2017',
+          name: 'Catalyst Coding Contest',
+          location: 'Corda iClassroom',
+          description: 'Programmeer wedstrijd met 5 tal vragen die in team opgelost konden worden. Als een vraag opgelost werd kon je pas aan de volgende vraag beginnen.'
         }
       }]
     };

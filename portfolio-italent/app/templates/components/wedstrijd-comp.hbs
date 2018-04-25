@@ -1,0 +1,15 @@
+<article class="listing">
+    <h3>{{wedstrijd.name}}</h3>
+    <div class="detail owner">
+        <span>Datum:</span> {{wedstrijd.date}}
+    </div>
+    <div class="detail location">
+        <span>Locatie:</span> {{wedstrijd.location}}
+    </div>
+    <div class="detail type">
+        <span>Beschrijving:</span> {{wedstrijd.description}}
+    </div>
+    <div class="detail type">
+        <span>Verslag: </span> {{#link-to "wedstrijdverslag" }} klik {{/link-to}}
+    </div>
+</article>

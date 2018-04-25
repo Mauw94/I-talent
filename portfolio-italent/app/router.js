@@ -13,6 +13,9 @@ Router.map(function() {
   this.route('reflection');
   this.route('internationaliserings');
   this.route('seminars');
+  this.route('wedstrijden');
+  this.route('wedstrijdverslag');
+  this.route('innovatie');
 });
 
 export default Router;

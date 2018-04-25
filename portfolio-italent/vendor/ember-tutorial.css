@@ -357,6 +357,15 @@ p {
     position: relative;
     top: -50px;
 }
+.overzicht {
+    background: url(../assets/images/spss-toetsen-overzicht.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    top: -50px;
+}
 .tomster {
     background: url(../assets/images/teaching.png);
     background-size: contain;
