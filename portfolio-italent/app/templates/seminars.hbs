@@ -3,11 +3,14 @@
     <hr>
     <br>
 </div>
-{{#each model as |seminar|}}
-    {{seminar-comp seminar=seminar}}
-{{/each}}
+{{#seminar-filter filter=(action 'filterByName') as |filteredResults|}}
+<ul class="results">
+    {{#each filteredResults as |seminar|}}
+    <li>{{seminar-comp seminar=seminar}}</li>
+    {{/each}}
+</ul>
+{{/seminar-filter}}
+
 <div class="jumbo">
-    {{#link-to "overview" class="btn"}}
-        Back 
-    {{/link-to}}
+    {{#link-to "overview" class="btn"}} Back {{/link-to}}
 </div>

@@ -29,7 +29,7 @@ export default function () {
     };
   });
 
-  this.get('/wedstrijds', function() {
+  this.get('/wedstrijds', function () {
     return {
       data: [{
         type: 'wedstrijd',
@@ -44,108 +44,114 @@ export default function () {
     };
   });
 
-  this.get('/seminars', function() {
-    return {
-      data: [{
-        type: 'seminar',
-        id: '1',
-        attributes: {
-          date: '04/40/2017',
-          name: 'AppFoundry',
-          location: 'Corda Campus',
-          description: 'Leren werken met Android studio, hoe het in elkaar zit'
-        }
-      }, {
-        type: 'seminar',
-        id: '2',
-        attributes: {
-          date: '11/10/2017',
-          name: 'Jidoka',
-          location: 'Corda iClassroom',
-          description: 'De basis van Kotlin leren'
-        }
-      },{
-        type: 'seminar',
-        id: '3',
-        attributes: {
-          date: '18/10/2017',
-          name: 'Humix',
-          location: 'PXL',
-          description: '/'
-        }
-      }, {
-        type: 'seminar',
-        id: '4',
-        attributes: {
-          date: '25/10/2017',
-          name: 'AppFoundry',
-          location: 'Corda Campus',
-          description: 'ReactJS seminarie'
-        }
-      },{
-        type: 'seminar',
-        id: '5',
-        attributes: {
-          date: '8/11/2017',
-          name: 'RealDolmen',
-          location: 'PXL',
-          description: '/'
-        }
-      },{
-        type: 'seminar',
-        id: '6',
-        attributes: {
-          date: '06/12/2017',
-          name: 'Tobania',
-          location: 'PXL',
-          description: 'Duidelijk te maken dat het makkelijk is om aan een hack programma te geraken op het internet en dit vrij eenvoudig te kunne gebruiken'
-        }
-      },{
-        type: 'seminar',
-        id: '7',
-        attributes: {
-          date: '13/12/2017',
-          name: 'Ordina',
-          location: 'PXL',
-          description: '/'
-        }
-      },{
-        type: 'seminar',
-        id: '8',
-        attributes: {
-          date: '18/12/2017',
-          name: 'Smart-ICT',
-          location: 'PXL',
-          description: '/'
-        }
-      },{
-        type: 'seminar',
-        id: '9',
-        attributes: {
-          date: '20/12/2017',
-          name: 'QFrame',
-          location: 'PXL',
-          description: '/'
-        }
-      },{
-        type: 'seminar',
-        id: '10',
-        attributes: {
-          date: '10/01/2018',
-          name: 'Faros',
-          location: 'Corda iClassroom',
-          description: ''
-        }
-      },{
-        type: 'seminar',
-        id: '11',
-        attributes: {
-          date: '17/01/2018',
-          name: 'BlockChain',
-          location: 'PXL',
-          description: 'Digitale revolutie'
-        }
-      }]
-    };
+  let seminars = [{
+    type: 'seminar',
+    id: '1',
+    attributes: {
+      date: '04/40/2017',
+      name: 'AppFoundry',
+      location: 'Corda Campus',
+      description: 'Leren werken met Android studio, hoe het in elkaar zit'
+    }
+  }, {
+    type: 'seminar',
+    id: '2',
+    attributes: {
+      date: '11/10/2017',
+      name: 'Jidoka',
+      location: 'Corda iClassroom',
+      description: 'De basis van Kotlin leren'
+    }
+  }, {
+    type: 'seminar',
+    id: '3',
+    attributes: {
+      date: '18/10/2017',
+      name: 'Humix',
+      location: 'PXL',
+      description: '/'
+    }
+  }, {
+    type: 'seminar',
+    id: '4',
+    attributes: {
+      date: '25/10/2017',
+      name: 'AppFoundry',
+      location: 'Corda Campus',
+      description: 'ReactJS seminarie'
+    }
+  }, {
+    type: 'seminar',
+    id: '5',
+    attributes: {
+      date: '8/11/2017',
+      name: 'RealDolmen',
+      location: 'PXL',
+      description: '/'
+    }
+  }, {
+    type: 'seminar',
+    id: '6',
+    attributes: {
+      date: '06/12/2017',
+      name: 'Tobania',
+      location: 'PXL',
+      description: 'Duidelijk te maken dat het makkelijk is om aan een hack programma te geraken op het internet en dit vrij eenvoudig te kunne gebruiken'
+    }
+  }, {
+    type: 'seminar',
+    id: '7',
+    attributes: {
+      date: '13/12/2017',
+      name: 'Ordina',
+      location: 'PXL',
+      description: '/'
+    }
+  }, {
+    type: 'seminar',
+    id: '8',
+    attributes: {
+      date: '18/12/2017',
+      name: 'Smart-ICT',
+      location: 'PXL',
+      description: '/'
+    }
+  }, {
+    type: 'seminar',
+    id: '9',
+    attributes: {
+      date: '20/12/2017',
+      name: 'QFrame',
+      location: 'PXL',
+      description: '/'
+    }
+  }, {
+    type: 'seminar',
+    id: '10',
+    attributes: {
+      date: '10/01/2018',
+      name: 'Faros',
+      location: 'Corda iClassroom',
+      description: ''
+    }
+  }, {
+    type: 'seminar',
+    id: '11',
+    attributes: {
+      date: '17/01/2018',
+      name: 'BlockChain',
+      location: 'PXL',
+      description: 'Digitale revolutie'
+    }
+  }];
+  this.get('/seminars', function (db, request) {
+    if (request.queryParams.name !== undefined) {
+      let filteredSeminars = seminars.filter(function (i) {
+        return i.attributes.name.toLowerCase().indexOf(request.queryParams.name.toLowerCase()) !== -1;
+      });
+      return { data: filteredSeminars };
+    } else {
+      return { data: seminars };
+    }
   })
 }

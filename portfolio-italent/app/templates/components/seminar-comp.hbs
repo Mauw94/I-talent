@@ -1,16 +1,12 @@
 <article class="listing">
-<table id="seminars">
-    <tr>
-        <th>Naam</th>
-        <th>Datum</th>
-        <th>Locatie</th>
-        <th>Beschrijving</th>
-    </tr>
-    <tr>
-        <td>{{seminar.name}}</td>
-        <td>{{seminar.date}}</td>
-        <td>{{seminar.location}}</td>
-        <td>{{seminar.description}}</td>
-    </tr>
-</table>
+    <h3>{{seminar.name}}</h3>
+    <div class="detail owner">
+        <span>Datum:</span> {{seminar.date}}
+    </div>
+    <div class="detail location">
+        <span>Locatie:</span> {{seminar.location}}
+    </div>
+    <div class="detail type">
+        <span>Beschrijving:</span> {{seminar.description}}
+    </div>
 </article>
