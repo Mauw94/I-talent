@@ -16,6 +16,8 @@ Router.map(function() {
   this.route('wedstrijden');
   this.route('wedstrijdverslag');
   this.route('innovatie');
+  this.route('busit');
+  this.route('stage');
 });
 
 export default Router;
