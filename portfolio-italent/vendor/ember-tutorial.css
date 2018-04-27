@@ -375,3 +375,21 @@ p {
     position: relative;
     top: -50px;
 }
+.busit {
+    background: url(../assets/images/DSC_0117.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    top: -50px;
+}
+.stage {
+    background: url(../assets/images/fxP3WHY.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    top: -50px;
+}
