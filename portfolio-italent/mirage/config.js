@@ -38,7 +38,30 @@ export default function () {
           date: '20/40/2017',
           name: 'Catalyst Coding Contest',
           location: 'Corda iClassroom',
-          description: 'Programmeer wedstrijd met 5 tal vragen die in team opgelost konden worden. Als een vraag opgelost werd kon je pas aan de volgende vraag beginnen.'
+          description: 'Programmeer wedstrijd met een 7-tal vragen die in team opgelost konden worden. Als een vraag opgelost werd kon je pas aan de volgende vraag beginnen.'
+        }
+      }]
+    };
+  });
+
+  this.get('/innovaties', function () {
+    return {
+      data: [{
+        type: 'innovatie',
+        id: '1',
+        attributes: {
+          name: 'Ontwikkeling portfolio',
+          description: 'I-Talent portfolio ontwikkeld in Emberjs.',
+          date: '28/04/2018'
+        }
+      },
+      {
+        type: 'innovatie',
+        id: '2',
+        attributes: {
+          name: 'Projectweek',
+          description: '2TIN projectweek',
+          date: '6/02/2017 t.e.m. 10/02/2017'
         }
       }]
     };

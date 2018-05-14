@@ -1,8 +1,32 @@
 <div class="jumbo">
     <h2>Overzicht activiteiten: innovatie</h2>
     <hr>
-    <br>
-    <p>Voor het onderdeel innovatie heb ik mijn portfolio website gemaakt in Emberjs.</p>
+    <br> {{#each model as |inno|}} {{innovatie-comp inno=inno}} {{/each}}
+    <p style="clear: both;">
+    </p>
+    <h2>Reflectie ontwikkeling portfolio</h2>
+    <p>
+        Ik heb er voor gekozen om mijn portfolio als een Emberjs website te maken. Dit kwam vooral doordat ik in aanraking kwam met
+        Emberjs voor mijn stage. Hier had ik als onderzoeksitem een vergelijking van twee Javascript frameworks. Hiervoor
+        had ik ook een Proof of Concept ingepland om in Emberjs te maken. Het gebruik van Ember beviel me wel dus toen kwam
+        de beslissing dat ik mijn portfolio hierin wou ontwikkelen.
+        <br>
+        <br> Doordat ik al veel ervaring had met het Angular framework viel het leren van Ember redelijk mee. Eerst had ik de
+        documentatie van Ember doorgelezen om te zien hoe de structuur ervan in elkaar zit. Nadien heb ik een tutorial gevolgd
+        waarin een kleine website werd ontwikkeld in Ember. Hierdoor kreeg ik zeer goed beeld op het gebruik en de structuur
+        erachter. Na het lezen en volgen van de documentatie en de tutorial ben ik zelf aan het portfolio begonnen. Eerst
+        alle routes en componenten gedefinieerd die ik nodig had en daarna begonnen met alle reflecties en data in de website
+        te stoppen.
+        <br> Omdat de website ook presenteerbaar moet zijn koos ik er voor om geen backend te maken waar ik data van kon halen,
+        maar in plaats van dit een 'fake' backend te gebruiken. Ember heeft een package, genaamd Mirage, waarin je een fake
+        backend kunt opzetten. Dit was ideaal om te gebruiken voor mijn portfolio. Na alle info hierin te hebben gestopt
+        en verwerkt in de verschillende componenten ben ik aan de layout begonnen. De ontwikkeling van de website ging sneller
+        dan ik had gedacht, vooral omdat ik al ervaring had met Angular en Ember niet heel erg veel verschilt hiervan.
+        <br>
+        <br> Ik ben heel erg tevreden met het resultaat. Het portfolio is toch een afsluiting van de opleiding en laat globaal
+        zien hoe je bent gevormd en veranderd. Ik zou Ember zeker nog een keer willen gebruiken binnen een meer geavanceerd
+        project. Het is een interessant framework met veel mogelijkheden. Bovendien is de documentatie ook heel erg goed.
+    </p>
 </div>
 <div class="jumbo">
     {{#link-to "overview" class="btn"}} Terug {{/link-to}}
